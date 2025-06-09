@@ -60,22 +60,28 @@
 .subtitle {
   font-size: 2rem;
   font-weight: 900;
-  color: #ffd700; /* Yellow text */
-  background-color: black; /* Black background */
+  color: #ffee00;
+  background-color: black;
   padding: 0.25em 0.75em;
   border-radius: 8px;
-  filter: url(#bevel);
   display: inline-block;
+  text-shadow:
+    1px 1px 0 #000,
+    2px 2px 0 #000,
+    3px 3px 0 #000;
 }
 .quote-lines {
   font-size: 1.75rem;
   font-weight: 900;
-  color: #ff3131; /* Red text */
-  background-color: black; /* Black background */
+  color: #ff3131;
+  background-color: black;
   padding: 0.5em 1em;
   border-radius: 8px;
-  filter: url(#bevel);
   display: inline-block;
+  text-shadow:
+    1px 1px 0 #000,
+    2px 2px 0 #000,
+    3px 3px 0 #000;
 }
     .quote-author {
       font-size: 1.2rem;
@@ -115,24 +121,6 @@
   </div>
 
   <a class="cta" href="https://pump.fun/" target="_blank">Buy $BBSS on pump.fun</a>
-  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none">
-  <defs>
-    <filter id="bevel">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur"/>
-      <feOffset in="blur" dx="2" dy="2" result="offsetBlur"/>
-      <feSpecularLighting in="blur" surfaceScale="2" specularConstant=".5" 
-        specularExponent="20" lighting-color="#ffffff" result="specOut">
-        <fePointLight x="-5000" y="-10000" z="20000"/>
-      </feSpecularLighting>
-      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
-      <feMerge>
-        <feMergeNode in="SourceGraphic"/>
-        <feMergeNode in="specOut"/>
-        <feMergeNode in="offsetBlur"/>
-      </feMerge>
-    </filter>
-  </defs>
-</svg>
 
 </body>
 </html>
