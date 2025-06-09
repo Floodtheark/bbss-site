@@ -64,7 +64,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  position: relative;
+  filter: url(#bevel);
   display: inline-block;
 }
 .subtitle::before {
@@ -79,7 +79,7 @@
   font-size: 1.75rem;
   font-weight: 900;
   color: #ff3131;
-  position: relative;
+  filter: url(#bevel);
   display: inline-block;
 }
     .quote-author {
@@ -120,5 +120,24 @@
   </div>
 
   <a class="cta" href="https://pump.fun/" target="_blank">Buy $BBSS on pump.fun</a>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none">
+  <defs>
+    <filter id="bevel">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur"/>
+      <feOffset in="blur" dx="2" dy="2" result="offsetBlur"/>
+      <feSpecularLighting in="blur" surfaceScale="2" specularConstant=".5" 
+        specularExponent="20" lighting-color="#ffffff" result="specOut">
+        <fePointLight x="-5000" y="-10000" z="20000"/>
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+      <feMerge>
+        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode in="specOut"/>
+        <feMergeNode in="offsetBlur"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
+
 </body>
 </html>
