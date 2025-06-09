@@ -72,16 +72,38 @@
       0% { transform: translateY(0); }
       100% { transform: translateY(-5px); }
     }
+    .quote-lines {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ff3131; /* Vibrant red for impact */
+  text-shadow:
+    1px 1px 0 #fff,     /* Bright top highlight */
+    2px 2px 0 #ccc,     /* Mid-depth bevel */
+    3px 3px 0 #999,     /* Deeper engraving */
+    4px 4px 0 #666;     /* Shadow floor */
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.quote-author {
+  font-size: 1.2rem;
+  color: #333;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
   </style>
 </head>
 <body>
   <h1>$BBSS</h1>
-  <p>
-    <div class="subtitle">Big Beautiful Spaceships</div>
-    <div class="quote">
-      “Whatever happens… we have the spaceships. NOT THEM.<br>Big, Beautiful Spaceships! ”<br><br> - Elon's X post 6/8/2025 (pretty much)
-    </div>
-  </p>
+ <p class="quote-lines">
+  Big Beautiful Spaceships<br>
+  “Whatever happens… WE have the spaceships. NOT THEM!<br><br>
+  Big, Beautiful Spaceships!”<br>
+</p>
+<p class="quote-author">
+  – Elon's X post 6/8/2025 (pretty much)
+</p>
+
   <div class="image">
     <div class="tweet-wrapper">
       <blockquote class="twitter-tweet">
