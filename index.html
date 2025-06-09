@@ -57,29 +57,40 @@
       align-items: center;
       margin-bottom: 1rem;
     }
-    .subtitle {
-      font-size: 1.75rem;
-      color: #FFD700;
-      font-weight: bold;
-      margin-bottom: 1.5rem;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
-    }
-    .quote-lines {
-      font-size: 1.6rem;
-      font-weight: bold;
-      color: #ff3131;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
+.subtitle {
+  font-size: 2rem;
+  font-weight: 900;
+  background: linear-gradient(to right, #ffee00, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  position: relative;
+  display: inline-block;
+}
+.subtitle::before {
+  content: attr(class);
+  position: absolute;
+  top: 3px; left: 3px;
+  color: black;
+  z-index: -1;
+  filter: brightness(0.3);
+}
+.quote-lines {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #ff3131;
+  position: relative;
+  display: inline-block;
+}
+.quote-lines::before {
+  content: attr(class);
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  color: black;
+  z-index: -1;
+  filter: brightness(0.2);
+}
     .quote-author {
       font-size: 1.2rem;
       color: #333;
