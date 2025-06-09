@@ -59,50 +59,51 @@
     }
     .subtitle {
       font-size: 1.75rem;
-      color: #0047AB;
+      color: #FFD700;
       font-weight: bold;
       margin-bottom: 1.5rem;
+      text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
     }
-    .quote {
-      font-size: 1.5rem;
+    .quote-lines {
+      font-size: 1.6rem;
       font-weight: bold;
-      color: #e60000;
+      color: #ff3131;
+      text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    .quote-author {
+      font-size: 1.2rem;
+      color: #333;
+      font-style: italic;
+      margin-top: 0.5rem;
     }
     @keyframes bounce {
       0% { transform: translateY(0); }
       100% { transform: translateY(-5px); }
     }
-    .quote-lines {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #ff3131; /* Vibrant red for impact */
-  text-shadow:
-    1px 1px 0 #fff,     /* Bright top highlight */
-    2px 2px 0 #ccc,     /* Mid-depth bevel */
-    3px 3px 0 #999,     /* Deeper engraving */
-    4px 4px 0 #666;     /* Shadow floor */
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.quote-author {
-  font-size: 1.2rem;
-  color: #333;
-  font-style: italic;
-  margin-top: 0.5rem;
-}
   </style>
 </head>
 <body>
   <h1>$BBSS</h1>
- <p class="quote-lines">
-  Big Beautiful Spaceships<br>
-  “Whatever happens… WE have the spaceships. NOT THEM!<br><br>
-  Big, Beautiful Spaceships!”<br>
-</p>
-<p class="quote-author">
-  – Elon's X post 6/8/2025 (pretty much)
-</p>
+
+  <p class="subtitle">Big Beautiful Spaceships</p>
+
+  <p class="quote-lines">
+    “Whatever happens… WE have the spaceships. NOT THEM!<br><br>
+    Big, Beautiful Spaceships!”
+  </p>
+  <p class="quote-author">
+    – Elon's X post 6/8/2025 (pretty much)
+  </p>
 
   <div class="image">
     <div class="tweet-wrapper">
@@ -115,7 +116,7 @@
     </div>
     <img src="/ship.png" alt="$BBSS Meme" />
   </div>
+
   <a class="cta" href="https://pump.fun/" target="_blank">Buy $BBSS on pump.fun</a>
 </body>
 </html>
-
