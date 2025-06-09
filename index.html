@@ -16,11 +16,17 @@
     h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
+      background: linear-gradient(90deg, #ffd700, #ff8c00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+      animation: bounce 1.2s ease infinite alternate;
     }
     p {
       font-size: 1.25rem;
       max-width: 800px;
       margin: 0 auto 2rem;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
     }
     .cta {
       display: inline-block;
@@ -37,7 +43,7 @@
     }
     .image img {
       width: 100%;
-      max-width: 500px;
+      max-width: 400px;
       height: auto;
       display: block;
       margin: 0 auto;
@@ -51,6 +57,10 @@
       align-items: center;
       margin-bottom: 1rem;
     }
+  @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-5px); }
+    }
   </style>
 </head>
 <body>
@@ -58,7 +68,7 @@
   <p>
     <strong>Big Beautiful Spaceships</strong>
     <br><br>
-    “Whatever happens… we have the spaceships. And they do not.<br> Big, Beautiful Spaceships”<br><br> - Elon's X post 6/8/2025 (pretty much)
+    “Whatever happens… we have the spaceships. And they do not. Big, Beautiful Spaceships” - Elon's X post 6/8/2025 (pretty much)
   </p>
   <div class="image">
     <div class="tweet-wrapper">
@@ -74,5 +84,6 @@
   <a class="cta" href="https://pump.fun/" target="_blank">Buy $BBSS on pump.fun</a>
 </body>
 </html>
+
 
 
